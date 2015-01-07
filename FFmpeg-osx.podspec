@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "FFmpeg-OSX"
+  s.name         = "FFmpeg-osx"
   s.version      = "2.5.2"
   s.summary      = "FFmpeg static libraries compiled for OSX"
   s.homepage     = "https://github.com/wao813/ffmpeg-universal"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.platform     = :osx
-
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => "$(SRCROOT)/Pods/**" }
   s.source       = { :git => "https://github.com/wao813/ffmpeg-universal.git" }
 
   s.default_subspec = 'precompiled'
